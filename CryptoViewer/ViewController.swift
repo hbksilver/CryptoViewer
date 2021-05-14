@@ -77,12 +77,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
    func format(price: String) -> String {
         // here we need to use methods to add $ and to truncate our decimals to 2 decimals.
-        return price
+    let double = Double(price)
+    let price = String(format: "$%.02f", double!)
+    return price
+      
         
       //return String(format: "$%d%d%d.2f" , price)
         
-        //var result = NumberFormatter.localizedString(from: 99999.99, number: .currency)
-        //return result
+       
         
     }
 
